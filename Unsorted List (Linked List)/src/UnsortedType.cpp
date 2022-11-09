@@ -96,8 +96,9 @@ void UnsortedType<ItemType>::DeleteItem(ItemType
     {
         while (!(item==(location->next)->info)&&location->next->next!=NULL)
             location = location->next;
+            
         tempLocation = location->next;
-        tempLocation = location;
+               
         if(tempLocation->info==item){ 
             found=true;
             location->next = (location->next)->next;
