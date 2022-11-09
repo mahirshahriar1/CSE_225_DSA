@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1667963007 source:c:\users\lib-603\desktop\none\lab6\src\unsortedtype.cpp
+	"UnsortedType.h"
+	<bits/stdc++.h>
+
+1667961298 c:\users\lib-603\desktop\none\lab6\include\unsortedtype.h
+
+1667962615 source:c:\users\lib-603\desktop\none\lab6\main.cpp
+	<iostream>
+	"src/UnsortedType.cpp"
+
+1667963007 c:\users\lib-603\desktop\none\lab6\src\unsortedtype.cpp
+	"UnsortedType.h"
+	<bits/stdc++.h>
+
