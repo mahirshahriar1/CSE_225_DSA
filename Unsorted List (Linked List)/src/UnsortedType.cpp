@@ -1,5 +1,5 @@
-#include "UnsortedType.h"
 #include <bits/stdc++.h>
+#include "UnsortedType.h"
 using namespace std;
 template <class ItemType>
 UnsortedType<ItemType>::UnsortedType()
@@ -65,7 +65,7 @@ void UnsortedType<ItemType>::InsertItemAtEnd(ItemType
         prev=ptr;
         ptr=ptr->next;
     }
-
+    
     if(prev==NULL){
         loc->info = item;
         loc->next = listData;
@@ -85,42 +85,63 @@ void UnsortedType<ItemType>::DeleteItem(ItemType
 {
     NodeType* location = listData;
     NodeType* tempLocation;
+    bool found=false;
     if (item == listData->info)
     {
         tempLocation = location;
         listData = listData->next;
+        found=true;
     }
     else
     {
         while (!(item==(location->next)->info)&&location->next->next!=NULL)
             location = location->next;
         tempLocation = location->next;
-        location->next = (location->next)->next;
-    }
-    delete tempLocation;
-    length--;
-    
-    /*NodeType* location = listData;
-    NodeType* prev=NULL;
-    NodeType* tempLocation;
-    if (item == listData->info)
-    {
         tempLocation = location;
-        listData = listData->next;
-    }
-    else
-    {
-        while (item!=(location->info)&&location->next!=NULL)
-        {
-            prev=location;
-            location = location->next;
+        if(tempLocation->info==item){ 
+            found=true;
+            location->next = (location->next)->next;
         }
-
-        tempLocation = location;
-        prev->next = (location->next);
+        
     }
-    delete tempLocation;
-    length--;*/
+    if(found){
+         delete tempLocation;
+         length--;
+    }else{
+        cout<<item<<" is not present in the list."<<endl;
+    }
+
+    //-------------------------------------------//
+    // bool found=false;
+    // NodeType* location = listData;
+    // NodeType* prev=NULL;
+    // NodeType* tempLocation;
+    // if (item == listData->info)
+    // {
+    //     tempLocation = location;
+    //     listData = listData->next;
+    //     found=true;
+    // }
+    // else
+    // {
+    //     while (item!=(location->info)&&location->next!=NULL)
+    //     {
+    //         prev=location;
+    //         location = location->next;
+    //     }
+    //     tempLocation = location;
+    //     if(tempLocation->info==item){ 
+    //         found=true;
+    //         prev->next = (location->next);
+    //     }
+    // }
+    // if(found){
+    //      delete tempLocation;
+    //      length--;
+    // }else{
+    //     cout<<item<<" is not present in the list."<<endl;
+    // }
+      
 }
 
 template <class ItemType>
