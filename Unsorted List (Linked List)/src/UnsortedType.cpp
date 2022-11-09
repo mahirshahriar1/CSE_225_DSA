@@ -92,7 +92,7 @@ void UnsortedType<ItemType>::DeleteItem(ItemType
     }
     else
     {
-        while (!(item==(location->next)->info))
+        while (!(item==(location->next)->info)&&location->next->next!=NULL)
             location = location->next;
         tempLocation = location->next;
         location->next = (location->next)->next;
@@ -110,7 +110,7 @@ void UnsortedType<ItemType>::DeleteItem(ItemType
     }
     else
     {
-        while (item!=(location->info))
+        while (item!=(location->info)&&location->next!=NULL)
         {
             prev=location;
             location = location->next;
