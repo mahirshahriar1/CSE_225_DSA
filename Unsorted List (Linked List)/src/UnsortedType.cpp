@@ -83,65 +83,64 @@ template <class ItemType>
 void UnsortedType<ItemType>::DeleteItem(ItemType
                                         item)
 {
-    NodeType* location = listData;
-    NodeType* tempLocation;
-    bool found=false;
-    if (item == listData->info)
-    {
-        tempLocation = location;
-        listData = listData->next;
-        found=true;
-    }
-    else
-    {
-        while (!(item==(location->next)->info)&&location->next->next!=NULL)
-            location = location->next;
-            
-        tempLocation = location->next;
-               
-        if(tempLocation->info==item){ 
-            found=true;
-            location->next = (location->next)->next;
-        }
-        
-    }
-    if(found){
-         delete tempLocation;
-         length--;
-    }else{
-        cout<<item<<" is not present in the list."<<endl;
-    }
-
-    //-------------------------------------------//
-    // bool found=false;
     // NodeType* location = listData;
-    // NodeType* prev=NULL;
     // NodeType* tempLocation;
+    // bool found=false;
     // if (item == listData->info)
     // {
-    //     tempLocation = location;
     //     listData = listData->next;
     //     found=true;
     // }
     // else
     // {
-    //     while (item!=(location->info)&&location->next!=NULL)
-    //     {
-    //         prev=location;
-    //         location = location->next;
+    //     while (location->next!=NULL&&(item!=(location->next)->info))
+    //         location = location->next;            
+        
+    //     if(location->next==NULL){
+    //         found=false;
     //     }
-    //     tempLocation = location;
-    //     if(tempLocation->info==item){ 
+    //     else{ 
     //         found=true;
-    //         prev->next = (location->next);
+    //         location->next = location->next->next;
     //     }
     // }
     // if(found){
-    //      delete tempLocation;
+    //      delete location;
     //      length--;
     // }else{
     //     cout<<item<<" is not present in the list."<<endl;
     // }
+
+    //-------------------------------------------//
+    bool found=false;
+    NodeType* location = listData;
+    NodeType* prev=NULL;
+    if (item == listData->info)
+    {
+        listData = listData->next;
+        found=true;
+    }
+    else
+    {
+        while (location!=NULL&&item!=(location->info)){
+            prev=location;
+            location = location->next;
+        }
+
+        if(location==NULL){
+            found=false;
+        }
+        else{ 
+            found=true;
+            prev->next = location->next;
+        }
+    }
+    if(found){
+         delete location;
+         length--;
+    }else{
+        cout<<item<<" is not present in the list."<<endl;
+    }
       
 }
 
