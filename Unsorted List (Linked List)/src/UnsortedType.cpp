@@ -99,7 +99,30 @@ void UnsortedType<ItemType>::DeleteItem(ItemType
     }
     delete tempLocation;
     length--;
+    
+    /*NodeType* location = listData;
+    NodeType* prev=NULL;
+    NodeType* tempLocation;
+    if (item == listData->info)
+    {
+        tempLocation = location;
+        listData = listData->next;
+    }
+    else
+    {
+        while (item!=(location->info))
+        {
+            prev=location;
+            location = location->next;
+        }
+
+        tempLocation = location;
+        prev->next = (location->next);
+    }
+    delete tempLocation;
+    length--;*/
 }
+
 template <class ItemType>
 void UnsortedType<ItemType>::MakeEmpty()
 {
