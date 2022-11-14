@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1668450354 source:c:\users\mahir\desktop\c++\assignment-1\task-2\src\sortedtype.cpp
+	"sortedtype.h"
+	<iostream>
+
+1668450389 c:\users\mahir\desktop\c++\assignment-1\task-2\include\sortedtype.h
+
+1668452047 source:c:\users\mahir\desktop\c++\assignment-1\task-2\main.cpp
+	<iostream>
+	"src/sortedtype.cpp"
+	"studentInfo.h"
+
+1668450354 c:\users\mahir\desktop\c++\assignment-1\task-2\src\sortedtype.cpp
+	"sortedtype.h"
+	<iostream>
+
+1668452038 source:c:\users\mahir\desktop\c++\assignment-1\task-2\src\studentinfo.cpp
+	"studentInfo.h"
+
+1668451785 c:\users\mahir\desktop\c++\assignment-1\task-2\include\studentinfo.h
+	<bits/stdc++.h>
+
+1668450632 c:\users\mahir\desktop\c++\assignment-1\task-2\src\studentinfo.cpp
+	"studentInfo.h"
+
+1668452047 source:c:\users\mahir\desktop\c++\assignment-1\task-2 (sorted linked list)\main.cpp
+	<iostream>
+	"src/sortedtype.cpp"
+	"studentInfo.h"
+
+1668450354 c:\users\mahir\desktop\c++\assignment-1\task-2 (sorted linked list)\src\sortedtype.cpp
+	"sortedtype.h"
+	<iostream>
+
+1668450389 c:\users\mahir\desktop\c++\assignment-1\task-2 (sorted linked list)\include\sortedtype.h
+
+1668455724 c:\users\mahir\desktop\c++\assignment-1\task-2 (sorted linked list)\include\studentinfo.h
+	<bits/stdc++.h>
+
+1668450354 source:c:\users\mahir\desktop\c++\assignment-1\task-2 (sorted linked list)\src\sortedtype.cpp
+	"sortedtype.h"
+	<iostream>
+
+1668455631 source:c:\users\mahir\desktop\c++\assignment-1\task-2 (sorted linked list)\src\studentinfo.cpp
+	"studentInfo.h"
+

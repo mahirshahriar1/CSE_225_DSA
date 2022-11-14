@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1668449051 source:c:\users\mahir\desktop\c++\assignment-1\task-1\task1\src\unsortedtype.cpp
+	<bits/stdc++.h>
+	"UnsortedType.h"
+
+1668449061 c:\users\mahir\desktop\c++\assignment-1\task-1\task1\include\unsortedtype.h
+
+1668449115 source:c:\users\mahir\desktop\c++\assignment-1\task-1\task1\main.cpp
+	<iostream>
+	"src/UnsortedType.cpp"
+
+1668449051 c:\users\mahir\desktop\c++\assignment-1\task-1\task1\src\unsortedtype.cpp
+	<bits/stdc++.h>
+	"UnsortedType.h"
+
+1668449115 source:c:\users\mahir\desktop\c++\assignment-1\task-1 (unsorted linked list)\main.cpp
+	<iostream>
+	"src/UnsortedType.cpp"
+
+1668449051 c:\users\mahir\desktop\c++\assignment-1\task-1 (unsorted linked list)\src\unsortedtype.cpp
+	<bits/stdc++.h>
+	"UnsortedType.h"
+
+1668449061 c:\users\mahir\desktop\c++\assignment-1\task-1 (unsorted linked list)\include\unsortedtype.h
+
+1668449051 source:c:\users\mahir\desktop\c++\assignment-1\task-1 (unsorted linked list)\src\unsortedtype.cpp
+	<bits/stdc++.h>
+	"UnsortedType.h"
+
