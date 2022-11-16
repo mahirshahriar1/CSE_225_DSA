@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1668567264 source:c:\users\lib-603\desktop\tasin\sorted list (linked list)\sortedtype.cpp
+	"SortedType.h"
+	<iostream>
+
+1668567269 c:\users\lib-603\desktop\tasin\sorted list (linked list)\sortedtype.h
+
+1668567275 source:c:\users\lib-603\desktop\tasin\sorted list (linked list)\main.cpp
+	<iostream>
+	"SortedType.cpp"
+
+1668567264 c:\users\lib-603\desktop\tasin\sorted list (linked list)\sortedtype.cpp
+	"SortedType.h"
+	<iostream>
+
