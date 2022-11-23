@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1669170574 source:c:\users\lib-603\desktop\07\stack (array based)\stacktype.cpp
+	"StackType.h"
+
+1669170551 c:\users\lib-603\desktop\07\stack (array based)\stacktype.h
+
+1669171519 source:c:\users\lib-603\desktop\07\stack (array based)\main.cpp
+	<iostream>
+	"stacktype.cpp"
+
+1669170574 c:\users\lib-603\desktop\07\stack (array based)\stacktype.cpp
+	"StackType.h"
+
