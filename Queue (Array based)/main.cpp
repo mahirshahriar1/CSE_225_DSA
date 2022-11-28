@@ -99,6 +99,7 @@ int main()
 //        ▪ Append “0” at the dequeued value and enqueue it.
 //        ▪ Append “1” at the dequeued value and enqueue it.*/
 //
+        
     cout<<"Enter a number: ";
     int n;
     cin>>n;
@@ -132,6 +133,15 @@ int main()
 //        qins(q,y);
 //    }
 
+/*Given a set of coin values and an amount of money,
+determine the minimum number of coins to make the given
+amount of money. The input starts with an integer n,
+specifying the number of coin types. Next n integers are the
+coin values. The final integer is the amount of money you
+have to make. You can assume that the amount will always
+be possible to make using the given coin types.*/
+    
+    
     int n,amount;
     cout<<"Enter the number of coins: ";
     cin>>n;
