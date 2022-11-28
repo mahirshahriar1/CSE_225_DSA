@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1669604715 source:c:\users\lib-603\desktop\class\queue (array based)\src\quetype.cpp
+	"quetype.h"
+	<bits/stdc++.h>
+
+1669603631 c:\users\lib-603\desktop\class\queue (array based)\include\quetype.h
+
+1669604805 source:c:\users\lib-603\desktop\class\queue (array based)\main.cpp
+	<iostream>
+	"src/quetype.cpp"
+
+1669604715 c:\users\lib-603\desktop\class\queue (array based)\src\quetype.cpp
+	"quetype.h"
+	<bits/stdc++.h>
+
