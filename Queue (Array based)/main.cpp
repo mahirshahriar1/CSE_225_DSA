@@ -55,84 +55,123 @@ void qdel(QueType <T> &q,T &item){
 
 int main()
 {
-    QueType <int> que(5);
-
-    checkEmpty(que);
-    qins(que,5);
-    qins(que,7);
-    qins(que,4);
-    qins(que,2);
-
-
-    checkEmpty(que);
-    checkFull(que);
-    qins(que,6);
-
-    print(que);
-    checkFull(que);
-
-    qins(que,8);
-
-    int item;
-    qdel(que,item);
-    qdel(que,item);
-
-    print(que);
-
-    qdel(que,item);
-    qdel(que,item);
-    qdel(que,item);
-
-    checkEmpty(que);
-
-    qdel(que,item);
-
-
-    /*Take an integer n from the user as input and use a queue to print
-    binary values of each integer from 1 to n. Here is how it can be
-    done.
-        o Create an empty queue
-        o Enqueue the first binary number “1” to the queue.
-        o Now run a loop for generating and printing n binary
-        numbers.
-        ▪ Dequeue and print the value.
-        ▪ Append “0” at the dequeued value and enqueue it.
-        ▪ Append “1” at the dequeued value and enqueue it.*/
-
+//    QueType <int> que(5);
+//
+//    checkEmpty(que);
+//    qins(que,5);
+//    qins(que,7);
+//    qins(que,4);
+//    qins(que,2);
+//
+//
+//    checkEmpty(que);
+//    checkFull(que);
+//    qins(que,6);
+//
+//    print(que);
+//    checkFull(que);
+//
+//    qins(que,8);
+//
+//    int item;
+//    qdel(que,item);
+//    qdel(que,item);
+//
+//    print(que);
+//
+//    qdel(que,item);
+//    qdel(que,item);
+//    qdel(que,item);
+//
+//    checkEmpty(que);
+//
+//    qdel(que,item);
+//
+//
+//    /*Take an integer n from the user as input and use a queue to print
+//    binary values of each integer from 1 to n. Here is how it can be
+//    done.
+//        o Create an empty queue
+//        o Enqueue the first binary number “1” to the queue.
+//        o Now run a loop for generating and printing n binary
+//        numbers.
+//        ▪ Dequeue and print the value.
+//        ▪ Append “0” at the dequeued value and enqueue it.
+//        ▪ Append “1” at the dequeued value and enqueue it.*/
+//
     cout<<"Enter a number: ";
     int n;
     cin>>n;
-//    QueType<string> q;
-//    string temp="1";
-//    while(n--){
-//        qdel(q,temp);
-//        cout<<temp<<endl;
-//
-//        string x=temp+"0";
-//        string y=temp+"1";
-//
-//        q.Enqueue(x);
-//        q.Enqueue(y);
-//    }
-
-    QueType<int> q;
-    int temp=1;
-    qins(q,temp);
+    QueType<string> q;
+    string temp="1";
     while(n--){
         qdel(q,temp);
         cout<<temp<<endl;
 
-        int x=temp;
-        x=x*10;
-        int y=temp;
-        y=y*10;
-        y++;
+        string x=temp+"0";
+        string y=temp+"1";
 
-        qins(q,x);
-        qins(q,y);
+        q.Enqueue(x);
+        q.Enqueue(y);
     }
+
+//    QueType<int> q;
+//    int temp=1;
+//    qins(q,temp);
+//    while(n--){
+//        qdel(q,temp);
+//        cout<<temp<<endl;
+//
+//        int x=temp;
+//        x=x*10;
+//        int y=temp;
+//        y=y*10;
+//        y++;
+//
+//        qins(q,x);
+//        qins(q,y);
+//    }
+
+    int n,amount;
+    cout<<"Enter the number of coins: ";
+    cin>>n;
+
+    QueType <int> coins;
+    QueType <int> counts;
+
+    int *arr=new int[n];
+
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        qins(coins,arr[i]);
+        qins(counts,1);
+    }
+
+    cout<<"Enter the money amount: ";
+    cin>>amount;
+
+    int c,cnt,res;
+
+    while(true){
+        qdel(coins,c);
+        qdel(counts,cnt);
+        if(c==amount){
+            res=cnt;
+            break;
+        }
+
+        for(int i=0;i<n;i++){
+            qins(coins,c+arr[i]);
+            qins(counts,cnt+1);
+        }
+
+    }
+    cout<<res<<endl;
+
 
 
 
     return 0;
 }
+
+
