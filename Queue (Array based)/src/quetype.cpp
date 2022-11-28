@@ -1,6 +1,4 @@
 #include "quetype.h"
-#include <bits/stdc++.h>
-using namespace std;
 
 template<class ItemType>
 QueType<ItemType>::QueType(int max)
