@@ -136,10 +136,10 @@ void solve(string equation){
 }
 
 int main(){
-//    #ifndef ONLINE_JUDGE  
-//           freopen("input.txt", "r", stdin); 
-//           freopen("output.txt", "w",stdout);
-    #endif
+    // #ifndef ONLINE_JUDGE  
+    //        freopen("input.txt", "r", stdin); 
+    //        freopen("output.txt", "w",stdout);
+    // #endif
     string line;
     while(getline(cin,line)){
         solve(line);
