@@ -32,15 +32,15 @@ void solve(string equation){
     bool unbalanced=false;
 
     StackType<char> operands;
-
+ 
     for(auto x:equation){
-        if(isNum(x)){
+        if(isNum(x)){                      
             temp+=x;
         }else{
 
             if(temp!=""){
                 postfix+=temp+'.';
-                temp="";
+                temp="";                
             }
 
             if(isOperator(x)){
@@ -56,17 +56,18 @@ void solve(string equation){
             }
 
             else if(x==')'){
-                bool found=false;
-
-                while(!operands.IsEmpty() and operands.Top()!='('){
+                bool found=false;                
+             
+                while(!operands.IsEmpty() and operands.Top()!='('){                  
                     postfix+=operands.Top();
                     operands.Pop();
 
-                    if(operands.Top() == '('){
+                    if(!operands.IsEmpty() and operands.Top() == '('){                                         
                         found = true;
-                    }
+                    }      
                 }
-                if(!found){
+               
+                if(!found){                    
                     unbalanced=true;
                     break;
                 }else{
@@ -81,20 +82,22 @@ void solve(string equation){
     }
 
     if(unbalanced){
-        cout<<"Invalid Expression"<<endl;
+        cout<<"Invalid Expression."<<endl;
         return;
     }
+    
+    if(temp != ""){
+        postfix += temp;
+    }
+
     while(!operands.IsEmpty()){
         postfix+=operands.Top();
         operands.Pop();
     }
-    //cout<<postfix<<endl;
 
     double ans=0;
-
     StackType<double> values;
-
-    int ind=0;
+    int ind=0;  
 
     while(ind<postfix.length()){
         if(isNum(postfix[ind])){
@@ -106,20 +109,20 @@ void solve(string equation){
             values.Push(num);
         }
         else if(isOperator(postfix[ind])){
-            if(values.IsEmpty()){
+            if(values.IsEmpty()){              
                 unbalanced=true;
                 break;
             }
             double a=values.Top();
             values.Pop();
             
-            if(values.IsEmpty()){
+            if(values.IsEmpty()){                 
                 unbalanced=true;
                 break;
             }
             double b=values.Top();
             values.Pop();
-
+            //cout<<b<<' '<<postfix[ind]<<' '<<a<<endl;            
             double c=evaluate(postfix[ind],b,a);
             values.Push(c);
             ind++;
@@ -127,6 +130,7 @@ void solve(string equation){
             ind++;
         }
     }
+    
     if(unbalanced or values.IsEmpty()){
         cout<<"Invalid Expression."<<endl;
     }else{
@@ -136,15 +140,15 @@ void solve(string equation){
 }
 
 int main(){
-    // #ifndef ONLINE_JUDGE  
-    //        freopen("input.txt", "r", stdin); 
-    //        freopen("output.txt", "w",stdout);
-    // #endif
+    #ifndef ONLINE_JUDGE  
+           freopen("input.txt", "r", stdin); 
+           freopen("output.txt", "w",stdout);
+    #endif
+    
     string line;
     while(getline(cin,line)){
         solve(line);
-    }
-    
+    }    
 
     return 0;
 }
