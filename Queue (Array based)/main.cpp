@@ -133,51 +133,6 @@ int main()
 //        qins(q,y);
 //    }
 
-/*Given a set of coin values and an amount of money,
-determine the minimum number of coins to make the given
-amount of money. The input starts with an integer n,
-specifying the number of coin types. Next n integers are the
-coin values. The final integer is the amount of money you
-have to make. You can assume that the amount will always
-be possible to make using the given coin types.*/
-    
-    
-    int n,amount;
-    cout<<"Enter the number of coins: ";
-    cin>>n;
-
-    QueType <int> coins;
-    QueType <int> counts;
-
-    int *arr=new int[n];
-
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-        qins(coins,arr[i]);
-        qins(counts,1);
-    }
-
-    cout<<"Enter the money amount: ";
-    cin>>amount;
-
-    int c,cnt,res;
-
-    while(true){
-        qdel(coins,c);
-        qdel(counts,cnt);
-        if(c==amount){
-            res=cnt;
-            break;
-        }
-
-        for(int i=0;i<n;i++){
-            qins(coins,c+arr[i]);
-            qins(counts,cnt+1);
-        }
-
-    }
-    cout<<res<<endl;
-
 
 
 
