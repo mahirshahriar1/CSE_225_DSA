@@ -225,11 +225,11 @@ GraphType<VertexType>::BFS_shortest_distance(VertexType startVertex, VertexType 
     QueType<VertexType> queue;
     QueType<VertexType> vertexQ;
     QueType<int> distance;
-
+ 
     bool found = false;
     VertexType vertex, item;
     int len=0;
-
+ 
     ClearMarks();
     queue.Enqueue(startVertex);
     distance.Enqueue(0);
@@ -248,13 +248,15 @@ GraphType<VertexType>::BFS_shortest_distance(VertexType startVertex, VertexType 
             {
                 MarkVertex(vertex);
                 GetToVertices(vertex, vertexQ);
-
+ 
                 while (!vertexQ.IsEmpty())
                 {
                     vertexQ.Dequeue(item);
                     if (!IsMarked(item)){
                         queue.Enqueue(item);
-                        distance.Enqueue(len+1);
+                        int row=IndexIs(vertices,vertex);
+                        int col=IndexIs(vertices,item);
+                        distance.Enqueue(edges[row][col]+len);
                     }
                 }
             }
@@ -264,5 +266,4 @@ GraphType<VertexType>::BFS_shortest_distance(VertexType startVertex, VertexType 
     if (!found)
         cout << "Path not found." << endl;
 }
-
 
