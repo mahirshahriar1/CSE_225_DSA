@@ -289,5 +289,19 @@ GraphType<VertexType>::custom_BFS(VertexType startVertex, VertexType endVertex)
         cout<<arr[i]<<' ';
     }
     cout<<endl;
+    
+    /*StackType <VertexType> stk;
+    
+    stk.Push(endVertex);
+    VertexType x=endVertex;
+    while(x!=startVertex){
+        x=backtrack[x];
+        stk.Push(x);     
+    }
+    while(!stk.IsEmpty()){
+        cout<<stk.Top()<<' ';
+        stk.Pop();
+    }
+    cout<<endl;*/
 
 }
