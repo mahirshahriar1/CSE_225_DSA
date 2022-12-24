@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1671853002 source:c:\users\lib-603\desktop\finalll\question 2\src\graphtype.cpp
+	<bits/stdc++.h>
+	"graphtype.h"
+	"stacktype.cpp"
+	"quetype.cpp"
+
+1671852278 c:\users\lib-603\desktop\finalll\question 2\include\graphtype.h
+	<bits/stdc++.h>
+	"stacktype.h"
+	"quetype.h"
+
+1671850951 c:\users\lib-603\desktop\finalll\question 2\include\stacktype.h
+
+1671850947 c:\users\lib-603\desktop\finalll\question 2\include\quetype.h
+
+1671850957 c:\users\lib-603\desktop\finalll\question 2\src\stacktype.cpp
+	<iostream>
+	"stacktype.h"
+
+1671850960 c:\users\lib-603\desktop\finalll\question 2\src\quetype.cpp
+	"quetype.h"
+	<iostream>
+
+1671850960 source:c:\users\lib-603\desktop\finalll\question 2\src\quetype.cpp
+	"quetype.h"
+	<iostream>
+
+1671850957 source:c:\users\lib-603\desktop\finalll\question 2\src\stacktype.cpp
+	<iostream>
+	"stacktype.h"
+
+1671853072 source:c:\users\lib-603\desktop\finalll\question 2\main.cpp
+	<iostream>
+	"src/graphtype.cpp"
+
+1671853002 c:\users\lib-603\desktop\finalll\question 2\src\graphtype.cpp
+	<bits/stdc++.h>
+	"graphtype.h"
+	"stacktype.cpp"
+	"quetype.cpp"
+
