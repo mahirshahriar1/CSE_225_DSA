@@ -57,6 +57,9 @@ int main(void){
            freopen("input.txt", "r", stdin); 
            freopen("output.txt", "w",stdout);
     #endif
+    
+    //Take length 100000 and see the results
+    
     int length;
     cout<<"Enter length: ";
     cin>>length;
@@ -105,7 +108,7 @@ int main(void){
     start_t_quick=time(NULL);
     quickSort(ptr, 0, length - 1);
     end_t_quick=time(NULL);
-     cout<<"Insertion Sort's time: "<<end_t_quick-start_t_quick<<endl;
+    cout<<"Quick Sort's time: "<<end_t_quick-start_t_quick<<endl;
    // cout << "Sorted array: \n";
    // printArray(ptr, length);
 
