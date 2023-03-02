@@ -60,7 +60,7 @@ int main()
     return 0;
 }
 
-//2d array custom column
+//2d array custom row
 
 
 int main()
